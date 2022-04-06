@@ -65,9 +65,80 @@
 # В переменную sub_str поместить НАИБОЛЬШУЮ часть строки между этими символами.
 # my_str = "My long string", l_limit = "o", r_limit = "g" -> sub_str = "ng strin".
 
+# my_str = "lonyyyyyygo"
+# l_limit = "o"
+# r_limit = "g"
+# list = []
+# sub_str = ""
+# for index,symbol in enumerate(my_str):
+#     if symbol == l_limit:
+#         index_l = index
+#         list.append(index_l)
+# for index,symbol in enumerate(my_str[::]):
+#     if symbol == r_limit:
+#         index_r = index
+#         list.append(index_r)
+# sub_str = my_str[list[0] + 1:list[-1]]
+# print(sub_str)
 
+# 8. Дана строка my_str. Разделите эту строку на пары из двух символов и поместите эти пары в список.
+# Если строка содержит нечетное количество символов, пропущенный второй символ последней пары должен
+# быть заменен подчеркиванием ('_'). Примеры: 'abcd' -> ['ab', 'cd'], 'abcde' -> ['ab', 'cd', e_']
+# (используйте срезы длинны 2)
+# my_str = "abcdefg"
+# my_list = []
+# index_1 = 0
+# index_2 = 2
+# if len(my_str) %2 != 0:
+#     my_str += "_"
+# for index in enumerate(my_str):
+#     if index_2 <= len(my_str):
+#         value = my_str[index_1:index_2]
+#         my_list.append(value)
+#         index_1 +=2
+#         index_2 +=2
+# print(my_list)
 
+# 9. Дан список чисел. Определите, сколько в этом списке элементов,
+# которые больше суммы двух своих соседей (слева и справа), и НАПЕЧАТАЙТЕ КОЛИЧЕСТВО таких элементов.
+# Крайние элементы списка никогда не учитываются, поскольку у них недостаточно соседей.
+# Для списка [2,4,1,5,3,9,0,7] ответом будет 3 потому что 4 > 2+1, 5 > 1+3, 9>3+0.
 
+# my_list = [2,4,1,5,3,9,0,7]
+# index_c = 1
+# index_l = 0
+# index_r = 2
+# rezult = 0
+# for x,symbol in enumerate(my_list):
+#     if index_r < len(my_list):
+#         summ = my_list[index_l] + my_list[index_r]
+#         if my_list[index_c] > summ:
+#             rezult +=1
+#         index_c += 1
+#         index_l += 1
+#         index_r += 1
+# print("количество элементов выполняющих условие = ",rezult)
 
+# 10. Дан список my_list в котором могут быть как строки (type str) так и целые числа (type int).
+# Например [1, 2, 3, "11", "22", 33]
+# Создать новый список в который поместить только строки из my_list.
 
+# my_list = [1,2,3, "11", "22", "33"]
+# new_list = []
+# for symbol in my_list:
+#     if type(symbol) == str:
+#         new_list.append(symbol)
+# print(new_list)
+
+# 11. Дана строка my_str. Создать список в который поместить те символы из my_str,
+# которые встречаются в строке ТОЛЬКО ОДИН раз.
+# my_str = "asdfgsrg"
+# my_list = []
+# for symbol in my_str:
+#     if my_str.count(symbol) == 1:
+#         my_list.append(symbol)
+# print(my_list)
+
+# 12. Даны две строки. Создать список в который поместить те символы,
+# которые есть в обеих строках хотя бы раз.
 
