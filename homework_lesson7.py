@@ -103,7 +103,6 @@
 # которые больше суммы двух своих соседей (слева и справа), и НАПЕЧАТАЙТЕ КОЛИЧЕСТВО таких элементов.
 # Крайние элементы списка никогда не учитываются, поскольку у них недостаточно соседей.
 # Для списка [2,4,1,5,3,9,0,7] ответом будет 3 потому что 4 > 2+1, 5 > 1+3, 9>3+0.
-
 # my_list = [2,4,1,5,3,9,0,7]
 # index_c = 1
 # index_l = 0
@@ -142,16 +141,18 @@
 # 12. Даны две строки. Создать список в который поместить те символы,
 # которые есть в обеих строках хотя бы раз.
 
-# my_str_1 = "asdfgh"
-# my_str_2 = "uiaajssshp"
-# my_list = []
-# str_general = my_str_1 + my_str_2
-# for symbol in str_general:
-#     if str_general.count(symbol) >= 2:
-#         if symbol not in my_list:
-#             my_list.append(symbol)
-# if my_list:
-#     print(my_list)
-# else:
-#     print("повторяющихся символов нет")
+my_str_1 = "asdfgh1"
+my_str_2 = "uiaajssshp21"
+my_list = []
+str_general = my_str_1 + my_str_2
+for symbol in str_general:
+    if str_general.count(symbol) >= 2:
+        if symbol not in my_list:
+            my_list.append(symbol)
+if my_list:
+    print(my_list)
+else:
+    print("повторяющихся символов нет")
+
+
 
