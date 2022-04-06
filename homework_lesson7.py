@@ -132,7 +132,7 @@
 
 # 11. Дана строка my_str. Создать список в который поместить те символы из my_str,
 # которые встречаются в строке ТОЛЬКО ОДИН раз.
-# my_str = "asdfgsrg"
+# my_str = "asdfgfffsrg"
 # my_list = []
 # for symbol in my_str:
 #     if my_str.count(symbol) == 1:
@@ -141,4 +141,17 @@
 
 # 12. Даны две строки. Создать список в который поместить те символы,
 # которые есть в обеих строках хотя бы раз.
+
+# my_str_1 = "asdfgh"
+# my_str_2 = "uiaajssshp"
+# my_list = []
+# str_general = my_str_1 + my_str_2
+# for symbol in str_general:
+#     if str_general.count(symbol) >= 2:
+#         if symbol not in my_list:
+#             my_list.append(symbol)
+# if my_list:
+#     print(my_list)
+# else:
+#     print("повторяющихся символов нет")
 
