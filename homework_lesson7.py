@@ -36,28 +36,15 @@ else:
 ############################################### 6
 my_str = "43 больше чем 34 но меньше чем 56"
 my_list = []
-rezult = 0
 for symbol in my_str.split(" "):
     if symbol.isdigit():
         my_list.append(int(symbol))
-for symbol_summ in my_list:
-    rezult += symbol_summ
-print(rezult)
+print(sum(my_list))
 ############################################  7
 my_str = "lonyyyyyygo"
 l_limit = "o"
 r_limit = "g"
-list = []
-sub_str = ""
-for index,symbol in enumerate(my_str):
-    if symbol == l_limit:
-        index_l = index
-        list.append(index_l)
-for index,symbol in enumerate(my_str[::]):
-    if symbol == r_limit:
-        index_r = index
-        list.append(index_r)
-sub_str = my_str[list[0] + 1:list[-1]]
+sub_str = my_str[my_str.find(l_limit) + 1:my_str.find(r_limit)]
 print(sub_str)
 ########################################### 8
 my_str = "abcdefg"
@@ -75,18 +62,14 @@ for index in enumerate(my_str):
 print(my_list)
 ########################################### 9
 my_list = [2,4,1,5,3,9,0,7]
-index_c = 1
-index_l = 0
-index_r = 2
+index = 1
 rezult = 0
 for x,symbol in enumerate(my_list):
-    if index_r < len(my_list):
-        summ = my_list[index_l] + my_list[index_r]
-        if my_list[index_c] > summ:
+    if index + 1 < len(my_list):
+        summ = my_list[index - 1] + my_list[index + 1]
+        if my_list[index] > summ:
             rezult +=1
-        index_c += 1
-        index_l += 1
-        index_r += 1
+        index += 1
 print("количество элементов выполняющих условие = ",rezult)
 ########################################## 10
 my_list = [1,2,3, "11", "22", "33"]
@@ -96,9 +79,9 @@ for symbol in my_list:
         new_list.append(symbol)
 print(new_list)
 ######################################### 11
-my_str = "asdfgfffsrg"
+my_str = "assfff"
 my_list = []
-for symbol in my_str:
+for symbol in set(my_str):
     if my_str.count(symbol) == 1:
         my_list.append(symbol)
 print(my_list)
@@ -106,11 +89,7 @@ print(my_list)
 my_str_1 = "asdfgh1"
 my_str_2 = "uiaajssshp21"
 my_list = []
-str_general = my_str_1 + my_str_2
-for symbol in str_general:
-    if str_general.count(symbol) >= 2:
-        if symbol not in my_list:
-            my_list.append(symbol)
+my_list = set(my_str_1).intersection(set(my_str_2))
 if my_list:
     print(my_list)
 else:
@@ -119,11 +98,9 @@ else:
 my_str_1 = "aaaasdf1"
 my_str_2 = "asdfff2"
 my_list = []
-str_general = my_str_1 + my_str_2
-for symbol in str_general:
-    if str_general.count(symbol) == 2:
-        if symbol not in my_list:
-            my_list.append(symbol)
+for symbol in set(my_str_1).intersection(my_str_2):
+    if (my_str_1 + my_str_2).count(symbol) == 2:
+        my_list.append(symbol)
 if my_list:
     print(my_list)
 else:
