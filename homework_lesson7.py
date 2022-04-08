@@ -44,7 +44,9 @@ print(sum(my_list))
 my_str = "lonyyyyyygo"
 l_limit = "o"
 r_limit = "g"
-sub_str = my_str[my_str.find(l_limit) + 1:my_str.find(r_limit)]
+l_index = my_str.find(l_limit) + 1
+r_index = my_str.rfind(r_limit)
+sub_str = my_str[l_index:r_index]
 print(sub_str)
 ########################################### 8
 my_str = "abcdefg"
