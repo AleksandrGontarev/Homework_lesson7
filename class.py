@@ -53,18 +53,18 @@ class WorkDirname:
 
 
 dir_name = "\\Homeworks"
-dict_files_folders = WorkDirname(dir_name)
+files_folders = WorkDirname(dir_name)
 
 
-dict_files_folders.files_path = WorkDirname(dir_name).creat_dict_file_dir()
+files_folders.files_path = WorkDirname(dir_name).creat_dict_file_dir()
 
-dict_files_folders.sort = WorkDirname(dir_name).sort_dictionary(False)
+files_folders.sort = WorkDirname(dir_name).sort_dictionary(False)
 
-dict_files_folders.write_file = WorkDirname(dir_name).write_file_path("aaa")
+files_folders.write_file = WorkDirname(dir_name).write_file_path("aaa")
 
 
 dir_name_1 = "\\Homework_3"
-dict_files_folders.creat_file_path(dir_name_1)
+files_folders.creat_file_path(dir_name_1)
 
 
 
