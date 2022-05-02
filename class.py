@@ -1,6 +1,5 @@
 import os
 
-
 class WorkDirname:
 
     def __init__(self, dirname: str):
@@ -8,7 +7,7 @@ class WorkDirname:
         self.dirname = dirname
         self.files_path = self.creat_dict_file_dir()
         self.sort = self.sort_dictionary()
-        self.dictionary = []
+        self.dictionary = self.write_file_path()
         self.creat_dict_file_dir()
 
     def creat_dict_file_dir(self):
@@ -32,12 +31,13 @@ class WorkDirname:
             dict_sort[key] = sorted(value, reverse=not revers_sort)
         return dict_sort
 
-    def write_file_path(self, string: str):
+    def write_file_path(self, string: str = ""):
         dictionary = self.files_path
-        if string.count("."):
-            dictionary["filenames"].append(string)
-        else:
-            dictionary["dirnames"].append(string)
+        if string:
+            if string.count("."):
+                dictionary["filenames"].append(string)
+            else:
+                dictionary["dirnames"].append(string)
         return dictionary
 
     def creat_file_path(self, dir_name: str):
@@ -53,12 +53,11 @@ class WorkDirname:
 
 
 dir_name = "\\Homeworks"
-string = "aaa"
 
 files_folders = WorkDirname(dir_name)
 files_folders.files_path = files_folders.creat_dict_file_dir()
 files_folders.sort = files_folders.sort_dictionary(False)
-files_folders.dictionary = files_folders.write_file_path(string)
+files_folders.dictionary = files_folders.write_file_path()
 
 dir_name_1 = "\\Homework_3"
 files_folders.creat_file_path(dir_name_1)
