@@ -57,7 +57,7 @@ dir_name = "\\Homeworks"
 files_folders = WorkDirname(dir_name)
 files_folders.files_path = files_folders.creat_dict_file_dir()
 files_folders.sort = files_folders.sort_dictionary(False)
-files_folders.dictionary = files_folders.write_file_path()
+files_folders.dictionary = files_folders.write_file_path("qqq")
 
 dir_name_1 = "\\Homework_3"
 files_folders.creat_file_path(dir_name_1)
