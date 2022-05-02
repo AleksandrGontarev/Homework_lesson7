@@ -4,12 +4,12 @@ import os
 class WorkDirname:
 
     def __init__(self, dirname: str):
+
         self.dirname = dirname
         self.files_path = self.creat_dict_file_dir()
         self.sort = self.sort_dictionary()
-
-    def __repr__(self):
-        return f"{self.files_path}"
+        self.dictionary = []
+        self.creat_dict_file_dir()
 
     def creat_dict_file_dir(self):
         list_files = []
@@ -53,15 +53,12 @@ class WorkDirname:
 
 
 dir_name = "\\Homeworks"
+string = "aaa"
+
 files_folders = WorkDirname(dir_name)
-
-
-files_folders.files_path = WorkDirname(dir_name).creat_dict_file_dir()
-
-files_folders.sort = WorkDirname(dir_name).sort_dictionary(False)
-
-files_folders.write_file = WorkDirname(dir_name).write_file_path("aaa")
-
+files_folders.files_path = files_folders.creat_dict_file_dir()
+files_folders.sort = files_folders.sort_dictionary(False)
+files_folders.dictionary = files_folders.write_file_path(string)
 
 dir_name_1 = "\\Homework_3"
 files_folders.creat_file_path(dir_name_1)
